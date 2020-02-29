@@ -11,13 +11,16 @@
 <body>
     <div id="app">
         <h1>{{mensaje}}</h1>
+        <h1>{{1 +1}}</h1>
+        <h1>{{bandera? "Expresion True" : "Expresion False"}}</h1>
     </div>
 
     <script>
         var myApp = new Vue({
             el:"#app",
             data:{
-                mensaje:"Hola mundo desde Vue"
+                mensaje:"Hola mundo desde Vue",
+                bandera:false
             }
         });
     </script>
