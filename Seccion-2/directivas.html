@@ -9,6 +9,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="app">
+        <div class="container">
+            <div class="jumbotron">
+                <input type="text" v-model:value="edad">
+                <h1 v-show="edad>18">Eres mayor de edad</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                edad:20
+            }
+        });
+    </script>
 </body>
 </html>
