@@ -9,12 +9,23 @@
 </head>
 <body>
     <div id="app" v-cloak>
-        <button v-on:click="votar">
-            Votar
-        </button>
-        <p>
-            Cantidad de votos <strong>{{votos}}</strong>
-        </p>
+        <div class="container">
+            <div class="row">
+                <button v-on:click="votar" class="btn btn-block btn-primary">
+                    Votar
+                </button>
+                <p>
+                    Cantidad de votos <strong>{{votos}}</strong>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" v-model="nombre" class="form-control">
+                    <input type="text" v-model="apellidos" class="form-control">
+                    <label class="form-control">{{nombreCompleto}}</label>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="js/vue.js"></script>
