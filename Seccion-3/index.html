@@ -22,7 +22,7 @@
                 <div class="col-12">
                     <input type="text" v-model="nombre" class="form-control">
                     <input type="text" v-model="apellidos" class="form-control">
-                    <label class="form-control">{{nombreCompleto}}</label>
+                    <label class="form-control">{{nombreCompleto | filtroParaMayusculas}}</label>
                 </div>
             </div>
         </div>

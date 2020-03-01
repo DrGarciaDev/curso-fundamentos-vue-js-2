@@ -1,3 +1,7 @@
+Vue.filter("filtroParaMayusculas", function(cadena){
+    return cadena.toUpperCase();
+});
+
 var myApp = new Vue({
     el:"#app",
     data:{
