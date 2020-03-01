@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="jumbotron">
+                <template v-for="item in lista">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.titulo}}</h5>
+                            <p class="card-text">{{item.descripcion}}</p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            lista:[
+                {titulo:"Correo1", descripcion:"Del correo 1"},
+                {titulo:"Correo2", descripcion:"Del correo 2"},
+                {titulo:"Correo3", descripcion:"Del correo 3"},
+                {titulo:"Correo4", descripcion:"Del correo 4"},
+            ]
+        }
+    });
+</script>
+</html>
