@@ -29,8 +29,14 @@
                     </form>
                 </div>
                 <div class="col-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Buscar</span>
+                        </div>
+                        <input type="text" class="form-control" v-model="txtBuscar">
+                    </div>
                     <ul>
-                        <li v-for="item in lista">{{item.clave}}-{{item.titulo}} : {{item.descripcion}} <button v-on:click="eliminar(item.clave)">[X]</button></li>
+                        <li v-for="item in listaFiltrada">{{item.clave}}-{{item.titulo}} : {{item.descripcion}} <button v-on:click="eliminar(item.clave)">[X]</button></li>
                     </ul>
                 </div>
             </div>

@@ -4,7 +4,24 @@ var app = new Vue({
         clave:'',
         titulo:'',
         descripcion:'',
-        lista:[]
+        lista:[],
+        txtBuscar:''
+    },
+    computed:{
+        listaFiltrada:function(){
+            var arreglo = this.lista;
+            var consulta = this.txtBuscar;
+
+            if(consulta !== ''){
+                arreglo = arreglo.filter(function(objeto){
+                    return (
+                        objeto.titulo.toLowerCase() + '' + objeto.descripcion.toLowerCase()
+                    ).indexOf(consulta.toLowerCase()) > -1
+                });
+            }
+
+            return arreglo;
+        }
     },
     methods:{
         agregar:function(clave, titulo, descripcion){
