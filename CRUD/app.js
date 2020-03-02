@@ -14,6 +14,13 @@ var app = new Vue({
                 descripcion: descripcion
             }
             app.lista.push(item);
+        },
+        eliminar:function(clave){
+            var index = app.lista.map(function(objeto){
+                return objeto.clave;
+            }).indexOf(clave);
+
+            app.lista.splice(index,1);
         }
     }
 });

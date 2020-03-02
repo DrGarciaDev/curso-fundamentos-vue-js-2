@@ -29,9 +29,9 @@
                     </form>
                 </div>
                 <div class="col-6">
-                    {{clave}} {{titulo}} {{descripcion}}
-                    <br>
-                    {{lista}}
+                    <ul>
+                        <li v-for="item in lista">{{item.clave}}-{{item.titulo}} : {{item.descripcion}} <button v-on:click="eliminar(item.clave)">[X]</button></li>
+                    </ul>
                 </div>
             </div>
         </div>
