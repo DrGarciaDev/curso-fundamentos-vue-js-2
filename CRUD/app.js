@@ -40,5 +40,15 @@ var app = new Vue({
 
             app.lista.splice(index,1);
         }
+    },
+    created: function(){
+        var datos = firebase.database().ref('pasatiempos');
+
+        datos.on('value', function(snapshot){
+            snapshot.forEach(function(childSnapshot){
+                var childData = childSnapshot.val();
+                app.lista.push(childData);
+            });
+        });
     }
 });
