@@ -31,6 +31,7 @@ var app = new Vue({
                 descripcion: descripcion
             }
             app.lista.push(item);
+            firebase.database().ref('pasatiempos/'+clave).set(item);
         },
         eliminar:function(clave){
             var index = app.lista.map(function(objeto){
